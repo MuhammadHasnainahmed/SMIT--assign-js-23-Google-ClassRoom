@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Class Room</title>
+    <link rel="shortcut icon" href="logo_square_rounded.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left">
+
+            <i class="fa-solid fa-bars " onclick="toggleSidebar()"></i>
+
+            <div class="logo">
+                <img src="logo_square_rounded.svg" alt="logo">
+                <p>Google Classroom</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <i class="fa-solid fa-plus" onclick="openPopup()"></i>
+            <img src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt="">
+            <img src="unnamed.png" alt="">
+
+        </div>
+
+    </nav>
+   
+    <div class="container">
+
+
+    <aside class="sidebar">
+        <div class="menu">
+            <div class="active">
+
+                <i class="fa-solid fa-house"></i>
+                <p class="menutext">Home</p>
+            </div>
+            <div class="active">
+                <i class="fa-solid fa-calendar"></i>
+                <p class="menutext">Calendar</p>
+            </div>
+            <div class="active">
+                <i class="fa-solid fa-bell"></i>
+                <p class="menutext">Notifications</p>
+            </div>
+            <div class="active">
+                <i class="fa-solid fa-gear"></i>
+                <p class="menutext">Settings</p>
+            </div>
+        </div>
+    </aside>
+
+
+    <div class="main-content">
+    <div class="banner">
+      <div class="banner-left">
+        <img src="https://www.gstatic.com/classroom/themes/img_code.jpg" alt="AI Educator" />
+      </div>
+      <div class="banner-content">
+        <h2>Introducing Generative AI for Educators</h2>
+        <p>A two-hour, no-cost online course for K–12 educators. Save time and enhance lesson planning with generative AI.</p>
+      </div>
+      <div class="banner-actions">
+        <button class="learn-more">Learn more</button>
+        <a href="#" class="get-started">Get started</a>
+      </div>
+      <div class="close-btn" onclick="closeBanner()">×</div>
+    </div>
+     
+    <div class="main-cards" id="Card">
+     
+      
+  
+</div>
+
+
+
+
+  
+  
+  
+  
+</div>
+<div class="overlay" id="popup">
+
+<div class="popup" >
+   <input type="text" placeholder="Class Name" id="className">
+   <input type="text" placeholder="Section" id="section" >
+   <input type="text" placeholder="Subject" id="subject">
+   <input type="text" placeholder="Teacher" id="teacher">
+   <button onclick="closePopup()">Cancel</button>
+   <button onclick="save()">Save</button>
+</div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>

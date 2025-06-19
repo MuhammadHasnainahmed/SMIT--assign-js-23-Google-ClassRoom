@@ -1,0 +1,468 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.left i{
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.left p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right i{
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.right img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    /* height: 100vh; */
+}
+
+
+
+.sidebar{
+   /* position: fixed; */
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+.active{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.active i{
+    /* font-size: 24px; */
+    color: #333;
+    cursor: pointer;
+}
+
+.active p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.main-content{
+    width: 100%;
+    padding: 20px;
+    /* background-color: #1a73e8; */
+}
+
+
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: #e8f0fe;
+  padding: 16px;
+  /* margin: 20px; */
+  width: auto;
+  border-radius: 10px;
+  position: relative;
+  font-family: sans-serif;
+  gap: 16px;
+}
+
+.banner-left img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.banner-content {
+  flex: 1;
+}
+
+.banner-content h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.banner-content p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.learn-more {
+  background-color: #d2e3fc;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.get-started {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.popup input:focus {
+  border-color: #1a73e8;
+}
+
+.popup button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.popup button:nth-of-type(1) {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.popup button:nth-of-type(1):hover {
+  background-color: #e0e0e0;
+}
+
+.popup button:nth-of-type(2) {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.popup button:nth-of-type(2):hover {
+  background-color: #0c5fd6;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+.main-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.class-card {
+    cursor: pointer;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.class-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-header {
+ background-image: url('https://www.gstatic.com/classroom/themes/img_reachout.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 16px;
+  height: 100px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.card-menu {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.class-info {
+  color: #777;
+  font-size: 13px;
+}
+
+
+.threedot{
+  /* position: absolute;
+  top: 270px;
+  left: 550px; */
+  font-size: 18px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* border-radius: 50%; */
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
+
+
+
+.threedot p{
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  /* padding: 10px; */
+}
+
+
+.threedot hr{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.threedot p:hover{
+  color: #1a73e8;
+  background-color: #f1f1f1;
+  transition: all 0.3s ease-in-out;
+
+  padding: 10px;
+}
+
+
+
+
+
+@media (max-width: 991px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left i.fa-bars {
+    display: none;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    padding: 10px 20px;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .popup {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .main-cards {
+    justify-content: center;
+  }
+
+  .class-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .banner-left img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .banner-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  
+}
+
+
+@media (max-width: 575px) {
+  .right img {
+    width: 32px;
+    height: 32px;
+  }
+
+ 
+  .right i {
+    font-size: 20px;
+  }
+
+  .left i {
+    font-size: 20px;
+  }
+
+  .left p {
+    font-size: 14px;
+  }
+
+  .popup input,
+  .popup button {
+    font-size: 13px;
+  }
+
+  .class-card {
+    height: auto;
+  }
+
+  .card-header {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .card-body {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .class-info {
+    font-size: 12px;
+  }
+
+  .main-cards {
+    gap: 12px;
+    padding: 12px;
+  }
+
+   .sidebar-bars{
+    display: none;
+  }
+
+}
